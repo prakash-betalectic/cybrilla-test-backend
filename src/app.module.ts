@@ -5,6 +5,7 @@ import { ProductModule } from './product/product.module';
 import { CartModule } from './cart/cart.module';
 import { SequelizeModule } from '@nestjs/sequelize';
 import { Product } from './product/product.model';
+import { Cart } from './cart/cart.model';
 
 @Module({
   imports: [
@@ -17,7 +18,7 @@ import { Product } from './product/product.model';
       username: 'root',
       password: 'CEvrbg123',
       database: 'cybrilla',
-      models: [Product],
+      models: [Product, Cart],
     }),
   ],
   controllers: [AppController],
